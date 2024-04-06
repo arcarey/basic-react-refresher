@@ -1,7 +1,12 @@
+import { Story } from '../../Interfaces/story.interface';
 import './Story-Card.css';
 
-export default function StoryCard() {
+interface Props {
+    story: Story
+}
+
+export default function StoryCard(props: Props) {
     return (
-        <h3>Story Card</h3>
+        <h3>{props.story.title}</h3>
     )
 }
