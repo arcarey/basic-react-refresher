@@ -2,6 +2,6 @@ import './Story-Card.css';
 
 export default function StoryCard() {
     return (
-        <h1>Story Card</h1>
+        <h3>Story Card</h3>
     )
 }
