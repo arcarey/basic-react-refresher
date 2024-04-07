@@ -8,8 +8,16 @@ interface Props {
 
 
 export default function StoryFilters(props: Props) {
-    const genresArr = props.genres
+    
     return (
-        <h1>Story Filters</h1>
+        <>
+        <button className='filter-chip'>All</button>
+        {props.genres.map(genre => {
+            return(
+                <button className='filter-chip'>{genre.toUpperCase()}</button>
+            )
+        })}
+
+        </>
     )
 }

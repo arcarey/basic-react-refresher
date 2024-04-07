@@ -13,6 +13,8 @@ export default function StoryList(props: Props) {
     //fetchStory function to drill to the story-detail page. 
         //use the story ID to fetch the details on of the story so it can be used on refresh without saving in the URL params
 
+    const fakeStoryList = ['1', '2', '3']
+
     useEffect(() => {
         console.log('props in story list', props.filteredStoryList)
     },[])
@@ -20,9 +22,12 @@ export default function StoryList(props: Props) {
     return (
         <>
             <h1>Story List</h1>
-            {props.filteredStoryList.map((story: Story) => {
-                <StoryCard
+            {props.filteredStoryList.length > 0 &&  props.filteredStoryList.map((story: Story) => {
+                return (
+                    <StoryCard
+                    key={story.uri}
                     story={story}/>
+                )
             })}
         </>
     )

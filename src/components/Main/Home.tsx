@@ -7,26 +7,24 @@ import axios from 'axios';
 import { Story } from '../../Interfaces/story.interface';
 
 export default function Home() {
-    const [storyList, setStoryList] = useState<Array<any>>([]);
-    const [filteredStoryList, setFilteredStoryList] = useState<Array<any>>([])
-    const [genres, setGenres] = useState<Array<string>>([])
-    const [activeGenres, setActiveGenres] = useState<Array<string>>([])
+    const [storyList, setStoryList] = useState<Array<Story>>([]);
+    const [filteredStoryList, setFilteredStoryList] = useState<Array<Story>>([]);
+    const [genres, setGenres] = useState<Array<string>>([]);
+    const [activeGenres, setActiveGenres] = useState<Array<string>>([]);
 
     async function fetchStories() {
         try {
             const stories = await axios.get(import.meta.env.VITE_NYT_TOP_STORIES_URL+import.meta.env.VITE_NYT_TOP_STORIES_KEY);
-            setStoryList(stories.data.results);
-            mapGenres(storyList);
-            setFilteredStoryList(storyList);
-            console.log('story list', storyList)
-            setActiveGenres(genres);
+            await setStoryList(stories.data.results);
         } catch (error) {
             console.log('Error Fetching stories', error);
         }
     }
 
     function setStories() {
-                
+        mapGenres(storyList);
+        setFilteredStoryList(storyList);
+        setActiveGenres(genres);
     }
 
     useEffect(() => {
@@ -35,25 +33,28 @@ export default function Home() {
 
 
     useEffect(()=>{
-        console.log('after filtered story list', storyList, genres, activeGenres)
-    }, [filteredStoryList])
+        setStories();
+    }, [storyList])
 
 
 
     function mapGenres(stories: Array<Story>) {
         let genreArr = [... new Set(stories.map((story: { section: any; }) => story.section))]
         setGenres(genreArr)
-        console.log('genres',genres)
     }
 
     return (
         <>
             <TitleCard />
-            <StoryFilters 
-                genres={genres}
-                setActiveGenres={setActiveGenres}/>
-            <StoryList 
-                filteredStoryList={filteredStoryList}/>
+            {(filteredStoryList.length > 0) && 
+                <>
+                    <StoryFilters 
+                        genres={genres}
+                        setActiveGenres={setActiveGenres}/>
+                    <StoryList 
+                        filteredStoryList={filteredStoryList}/>
+                </>
+        }
         </>
 
     )
