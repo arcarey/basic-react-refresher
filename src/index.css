@@ -137,6 +137,14 @@ button {
   transition: border-color 0.25s;
   margin: auto;
 }
+
+.selected-button {
+  background-color: var(--primary-775);
+  color: var(--neutral-100);
+  font-weight: 900;
+  transition: all .3s ease;
+}
+
 button:hover {
   border-color: var(--yellow-green-550);
 }

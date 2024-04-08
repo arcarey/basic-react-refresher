@@ -26,7 +26,6 @@ export default function Home() {
     }
 
     function filterGenres (activeGenreArr: Array<string>) {
-        console.log(activeGenreArr)
         activeGenreArr.includes('All') ? setFilteredStoryList(storyList) :
         setFilteredStoryList(storyList.filter(story => activeGenreArr.includes(story.section)));
     }
@@ -34,22 +33,19 @@ export default function Home() {
     function mapGenres(stories: Array<Story>) {
         let genreArr = [... new Set(stories.map((story: { section: any; }) => story.section))]
         setGenres(genreArr);
-        setActiveGenres(genreArr);
+        setActiveGenres(['All']);
     }
 
     useEffect(() => {
-        console.log('load')
         fetchStories();
     }, []);
 
 
     useEffect(() => {
-        console.log('story list changed')
         setStories(storyList);
     }, [ storyList ])
 
     useEffect(() => {
-        console.log('activeGenres changed')
         filterGenres(activeGenres)
     }, [ activeGenres ])
 
@@ -66,7 +62,7 @@ export default function Home() {
                         <StoryFilters 
                             genres={genres}
                             setActiveGenres={setActiveGenres}
-                            // activeGenres={activeGenres}
+                            activeGenres={activeGenres}
                             />
                     </div>
                     <div className='story-list'>
