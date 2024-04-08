@@ -10,3 +10,10 @@
 .filter-chip {
     text-transform: uppercase;
 }
+
+@media (max-width: 500px) {
+    .filter-chip {
+        padding: .5em 1em;
+        font-size: .7em;
+    }
+}

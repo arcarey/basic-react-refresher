@@ -9,9 +9,6 @@ interface Props {
 
 
 export default function StoryFilters(props: Props) {
-    useEffect(() => {
-        console.log(props.activeGenres)
-    }, [])
     
     return (
         <div className='story-filters-container'>

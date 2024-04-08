@@ -31,7 +31,7 @@
   --neutral-450: #878485;
   --neutral-325: #a4a3a3;
   --neutral-225: #c3c2c2;
-  --neutral-100: #e3e2e2;
+  --neutral-100: #e8e8e8;
   
   /* Success */
   --success: #5bd673;
@@ -129,6 +129,7 @@ button {
   border-radius: 16px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  color: var(--neutral);
   font-size: .8em;
   font-weight: 500;
   font-family: inherit;

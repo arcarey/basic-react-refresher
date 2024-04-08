@@ -36,3 +36,16 @@ To serve on your local network to check out with a mobile device:
 To run the test suite:
 
 `run - npm test`
+
+
+## Future Development:
+
+landscape mobile scaling 
+
+filter buttons should be refactored to be radio or checkbox buttons
+
+Selector buttons should also have an 'affirmative' check for active filter rather than just color for a11y standards  
+
+Keyboard navigation for stories. Right now keyboard tabbing allows navigation to invisible stories
+
+Aria labels and full a11y audit 
