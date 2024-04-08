@@ -27,7 +27,7 @@ run - npm i
 
 To start the dev server:
 
-run - npm start
+run - npm run dev
 
 To run the test suite:
 
