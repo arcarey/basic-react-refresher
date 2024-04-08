@@ -1,8 +1,5 @@
 .title-card-divider {
-    margin-left: -50%;
-    width: 200%;
-    overflow: visible;
-    margin: 4em 0 4em -50%
+    margin: 4em 0 4em 0;
 }
 
 .title-card-header {
@@ -20,4 +17,14 @@
     .title-card-text {
         font-size: 1.5em;
     }
+}
+
+@media (max-width: 500px) {
+    .title-card-text {
+        font-size: 1.2em;
+    }
+    .title-card-divider {
+        margin: 2em 0 1em 0;
+    }
+    
 }

@@ -5,6 +5,7 @@
 }
 
 .story-card-thumbnail {
+    margin: .5em 0 .5em 0;
     width: 150px;
     height: 100px;
     object-fit: cover;
