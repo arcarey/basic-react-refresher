@@ -11,14 +11,12 @@ export default function StoryDetail() {
     const [storyDetails, setStoryDetails] = useState<Story>()
 
     useEffect(() => {
-        console.log('story id', storyId)
         fetchStories();
     }, [])
 
     async function fetchStories() {
         try {
             const stories = await axios.get(import.meta.env.VITE_NYT_TOP_STORIES_URL+import.meta.env.VITE_NYT_TOP_STORIES_KEY);
-            await console.log(stories, stories.data.results.find((story: Story) => story.uri.split('/')[story.uri.split('/').length -1] === storyId))
             await setStory(stories.data.results.find((story: Story) => story.uri.split('/')[story.uri.split('/').length -1] === storyId));
         } catch (error) {
             console.log('Error Fetching stories', error);
@@ -28,16 +26,17 @@ export default function StoryDetail() {
 
     function setStory(story: Story) {
         setStoryDetails(story)
-        console.log('setStory', story)
     }
 
     return (
        <>
        {storyDetails && 
        <div>
-        <img
+        {storyDetails.multimedia && 
+            <img
             src={storyDetails.multimedia[1].url}
             ></img>
+        }
         <h1>{storyDetails.title}</h1>
        </div>
        }

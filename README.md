@@ -18,17 +18,21 @@ Clone the repo
 
 Create a .env file in the root directory with the following 
 
-NYT_TOP_STORIES_KEY='YOUR_KEY' (LiveFront, this key will be provided in my email with the link)
-NYT_TOP_STORIES_URL='https://api.nytimes.com/svc/topstories/v2/home.json?api-key='
+`NYT_TOP_STORIES_KEY='YOUR_KEY' (LiveFront, this key will be provided in my email with the link)
+NYT_TOP_STORIES_URL=https://api.nytimes.com/svc/topstories/v2/home.json?api-key=`
 
 To install the needed packages:
 
-run - npm i
+`run - npm i`
 
 To start the dev server:
 
-run - npm run dev
+`npm run dev`
+
+To serve on your local network to check out with a mobile device:
+
+`run - npm run dev -- --host`
 
 To run the test suite:
 
-run - npm test
+`run - npm test`

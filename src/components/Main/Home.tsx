@@ -21,27 +21,41 @@ export default function Home() {
         }
     }
 
-    function setStories() {
+    function setStories(storyList: Array<Story>) {
         mapGenres(storyList);
-        setFilteredStoryList(storyList);
-        setActiveGenres(genres);
+    }
+
+    function filterGenres (activeGenreArr: Array<string>) {
+        console.log(activeGenreArr)
+        activeGenreArr.includes('All') ? setFilteredStoryList(storyList) :
+        setFilteredStoryList(storyList.filter(story => activeGenreArr.includes(story.section)));
+    }
+
+    function mapGenres(stories: Array<Story>) {
+        let genreArr = [... new Set(stories.map((story: { section: any; }) => story.section))]
+        setGenres(genreArr);
+        setActiveGenres(genreArr);
     }
 
     useEffect(() => {
+        console.log('load')
         fetchStories();
     }, []);
 
 
-    useEffect(()=>{
-        setStories();
-    }, [storyList])
+    useEffect(() => {
+        console.log('story list changed')
+        setStories(storyList);
+    }, [ storyList ])
 
+    useEffect(() => {
+        console.log('activeGenres changed')
+        filterGenres(activeGenres)
+    }, [ activeGenres ])
 
-
-    function mapGenres(stories: Array<Story>) {
-        let genreArr = [... new Set(stories.map((story: { section: any; }) => story.section))]
-        setGenres(genreArr)
-    }
+    useEffect(() => {
+        console.log(filteredStoryList)
+    }, [ filteredStoryList ])
 
     return (
         <>
@@ -51,11 +65,14 @@ export default function Home() {
                     <div className='story-filters'>
                         <StoryFilters 
                             genres={genres}
-                            setActiveGenres={setActiveGenres}/>
+                            setActiveGenres={setActiveGenres}
+                            // activeGenres={activeGenres}
+                            />
                     </div>
                     <div className='story-list'>
                         <StoryList 
-                            filteredStoryList={filteredStoryList}/>
+                            filteredStoryList={filteredStoryList}
+                            storyList={storyList}/>
                     </div>
                 </div>
         }

@@ -6,9 +6,29 @@
 
 .story-card-thumbnail {
     width: 150px;
-    height: 150px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .story-card-byline {
     font-size: 1em;
+}
+
+.not-visible {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .7s ease;
+    -webkit-transition: max-height .7s ease;
+    -moz-transition: max-height .7s ease;
+    -ms-transition: max-height .7s ease;
+    -o-transition: max-height .7s ease;
+}
+.visible {
+    overflow: hidden;
+    max-height: 250px;
+    transition: max-height ease .7s;
+    -webkit-transition: max-height .7s ease;
+    -moz-transition: max-height .7s ease;
+    -ms-transition: max-height .7s ease;
+    -o-transition: max-height .7s ease;
 }
