@@ -17,10 +17,11 @@ export default function StoryCard(props: Props) {
         <>
             <a className='story-card'
                 title={props.story.title}
-                href={`/story/:${props.story.uri}`}>
+                href={`../story/${props.story.uri.split('/')[props.story.uri.split('/').length -1]}`}>
                 <div>
                     <h3 className='story-card-title'>{props.story.title}</h3>
                     <p className='story-card-byline'>{props.story.byline}</p>
+                    <div className='divider'></div>
                 </div>
                 <img className='story-card-thumbnail' src={
                     props.story.multimedia.filter(photo => photo.format === 'Large Thumbnail').length > 0 ?
@@ -30,7 +31,6 @@ export default function StoryCard(props: Props) {
                     alt={props.story.multimedia[props.story.multimedia.length - 1].caption}
                     ></img>
             </a>
-            <div className='divider'></div>
 
         </>
     )

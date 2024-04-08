@@ -1,7 +1,7 @@
 .story-card {
     display: flex;
-    margin-bottom: .5em;
     justify-content: space-between;
+    min-height: 160px;
 }
 
 .story-card-thumbnail {

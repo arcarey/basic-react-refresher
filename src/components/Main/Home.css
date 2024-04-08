@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
-    column-gap: 2rem;
+    column-gap: 5rem;
 }
 
 .story-filters {
@@ -28,5 +28,11 @@
     }
     .story-list {
         grid-row-start: 2;
+    }
+}
+
+@media (max-width: 1100px) {
+    .story-grid {
+        column-gap: 2rem;
     }
 }

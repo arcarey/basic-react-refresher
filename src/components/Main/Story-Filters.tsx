@@ -16,7 +16,9 @@ export default function StoryFilters(props: Props) {
                 <button className='filter-chip'>All</button>
                 {props.genres.map(genre => {
                     return(
-                        <button className='filter-chip'>{genre}</button>
+                        <button 
+                            key={genre}
+                            className='filter-chip'>{genre}</button>
                     )
                 })}
                 <div className='divider filter-divider'></div>
