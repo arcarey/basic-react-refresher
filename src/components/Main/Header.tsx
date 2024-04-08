@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <div className='full-width-container'>
 
-        <div className='container'>
+        <div className='header-container'>
             <a
                 id='home-title-header' 
                 href='/home'

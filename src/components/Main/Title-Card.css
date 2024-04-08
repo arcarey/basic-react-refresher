@@ -1,2 +1,23 @@
-.container {
+.title-card-divider {
+    margin-left: -50%;
+    width: 200%;
+    overflow: visible;
+    margin: 4em 0 4em -50%
+}
+
+.title-card-header {
+    font-size: 4em;
+}
+
+.title-card-text {
+    font-size: 2em;
+}
+
+@media (max-width: 900px) {
+    .title-card-header {
+        font-size: 3em;
+    }
+    .title-card-text {
+        font-size: 1.5em;
+    }
 }

@@ -1,12 +1,14 @@
 
-.container {
+.header-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1050px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2em 0 2em;
     height: 120px;
+    align-items: center;
 }
+
 
 .full-width-container {
     border-bottom: 2px solid var(--neutral-550);

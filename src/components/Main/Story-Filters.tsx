@@ -10,14 +10,17 @@ interface Props {
 export default function StoryFilters(props: Props) {
     
     return (
-        <>
-        <button className='filter-chip'>All</button>
-        {props.genres.map(genre => {
-            return(
-                <button className='filter-chip'>{genre.toUpperCase()}</button>
-            )
-        })}
-
-        </>
+        <div className='story-filters-container'>
+            <h4>Topics for you:</h4>
+            <div>
+                <button className='filter-chip'>All</button>
+                {props.genres.map(genre => {
+                    return(
+                        <button className='filter-chip'>{genre}</button>
+                    )
+                })}
+                <div className='divider filter-divider'></div>
+            </div>
+        </div>
     )
 }

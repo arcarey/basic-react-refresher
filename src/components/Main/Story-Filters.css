@@ -1,0 +1,12 @@
+.story-filter-container {
+    display: flex;
+    /* border-bottom: 2px solid var(--neutral-325); */
+}
+
+.filter-divider {
+    margin-top: 1.5em;
+}
+
+.filter-chip {
+    text-transform: uppercase;
+}

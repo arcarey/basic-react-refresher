@@ -14,6 +14,24 @@ export default function StoryCard(props: Props) {
 
     // 
     return (
-        <h3>{props.story.title}</h3>
+        <>
+            <a className='story-card'
+                title={props.story.title}
+                href={`/story/:${props.story.uri}`}>
+                <div>
+                    <h3 className='story-card-title'>{props.story.title}</h3>
+                    <p className='story-card-byline'>{props.story.byline}</p>
+                </div>
+                <img className='story-card-thumbnail' src={
+                    props.story.multimedia.filter(photo => photo.format === 'Large Thumbnail').length > 0 ?
+                    props.story.multimedia.filter(photo => photo.format === 'Large Thumbnail')[0].url :
+                    props.story.multimedia[props.story.multimedia.length - 1].url
+                    }
+                    alt={props.story.multimedia[props.story.multimedia.length - 1].caption}
+                    ></img>
+            </a>
+            <div className='divider'></div>
+
+        </>
     )
 }

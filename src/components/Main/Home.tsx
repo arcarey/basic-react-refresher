@@ -47,13 +47,17 @@ export default function Home() {
         <>
             <TitleCard />
             {(filteredStoryList.length > 0) && 
-                <>
-                    <StoryFilters 
-                        genres={genres}
-                        setActiveGenres={setActiveGenres}/>
-                    <StoryList 
-                        filteredStoryList={filteredStoryList}/>
-                </>
+                <div className='story-grid'>
+                    <div className='story-filters'>
+                        <StoryFilters 
+                            genres={genres}
+                            setActiveGenres={setActiveGenres}/>
+                    </div>
+                    <div className='story-list'>
+                        <StoryList 
+                            filteredStoryList={filteredStoryList}/>
+                    </div>
+                </div>
         }
         </>
 

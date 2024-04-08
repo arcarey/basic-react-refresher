@@ -1,0 +1,14 @@
+.story-card {
+    display: flex;
+    margin-bottom: .5em;
+    justify-content: space-between;
+}
+
+.story-card-thumbnail {
+    width: 150px;
+    height: 150px;
+}
+
+.story-card-byline {
+    font-size: 1em;
+}
