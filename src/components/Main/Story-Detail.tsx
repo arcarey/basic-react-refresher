@@ -16,7 +16,7 @@ export default function StoryDetail() {
 
     async function fetchStories() {
         try {
-            const stories = await axios.get(import.meta.env.VITE_NYT_TOP_STORIES_URL+import.meta.env.VITE_NYT_TOP_STORIES_KEY);
+            const stories = await axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key='+process.env.NYT_TOP_STORIES_KEY);
             await setStory(stories.data.results.find((story: Story) => story.uri.split('/')[story.uri.split('/').length -1] === storyId));
         } catch (error) {
             console.log('Error Fetching stories', error);
