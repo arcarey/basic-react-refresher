@@ -1,18 +1,43 @@
 .story-card {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     min-height: 160px;
+    margin-bottom: 1em;
+}
+
+.story-card-content {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .story-card-thumbnail {
-    margin: .5em 0 .5em 0;
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
+    max-width: 200px;
+}
+
+.story-card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .story-card-byline {
     font-size: 1em;
+}
+
+.story-card-text {
+    width: 100%;
+    padding-right: 1em;
+}
+
+.story-card-divider {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
 }
 
 .not-visible {
@@ -25,11 +50,20 @@
     -o-transition: max-height .7s ease;
 }
 .visible {
+    width: 100%;
     overflow: hidden;
-    max-height: 250px;
+    max-height: 350px;
     transition: max-height ease .7s;
     -webkit-transition: max-height .7s ease;
     -moz-transition: max-height .7s ease;
     -ms-transition: max-height .7s ease;
     -o-transition: max-height .7s ease;
+}
+
+@media (max-width: 500px) {
+    .story-card-thumbnail {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
 }
