@@ -1,0 +1,27 @@
+.story-detail-container {
+    max-width: 600px;
+}
+
+.story-detail-image {
+    max-width: 600px;
+    width: 100%;
+}
+
+.story-detail-title {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    line-height: .95;
+}
+
+.story-detail-abstract {
+    color: var(--neutral-675);
+}
+
+.story-detail-divider {
+    margin-bottom: .3em;
+}
+
+.story-detail-byline {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}

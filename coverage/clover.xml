@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1712700272314" clover="3.2.0">
+  <project timestamp="1712700272314" name="All files">
+    <metrics statements="27" coveredstatements="2" conditionals="15" coveredconditionals="0" methods="13" coveredmethods="0" elements="55" coveredelements="2" complexity="0" loc="27" ncloc="27" packages="2" files="7" classes="7"/>
+    <package name="About">
+      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="AboutPage.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/About/AboutPage.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Main">
+      <metrics statements="24" coveredstatements="2" conditionals="15" coveredconditionals="0" methods="12" coveredmethods="0"/>
+      <file name="Header.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/Main/Header.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="Stories-Container.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/Main/Stories-Container.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="Story-Card.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/Main/Story-Card.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+      <file name="Story-Filters.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/Main/Story-Filters.tsx">
+        <metrics statements="6" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+      </file>
+      <file name="Story-List.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/Main/Story-List.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+      <file name="Title-Card.tsx" path="/Users/andrewcarey/Documents/livefront/basic-react-refresher/src/components/Main/Title-Card.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

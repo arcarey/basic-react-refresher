@@ -23,19 +23,23 @@ NYT_TOP_STORIES_URL=https://api.nytimes.com/svc/topstories/v2/home.json?api-key=
 
 To install the needed packages:
 
-`run - npm i`
+run - `npm i`
 
 To start the dev server:
 
-`npm run dev`
+run - `npm run dev`
 
 To serve on your local network to check out with a mobile device:
 
-`run - npm run dev -- --host`
+run - `npm run dev -- --host`
 
 To run the test suite:
 
-`run - npm test`
+run - `npm test`
+
+To run the test suite with test coverage:
+
+run - `npm run coverage`
 
 
 ## Future Development:
