@@ -170,6 +170,15 @@ describe( Home , () => {
             mockedAxios.get.mockResolvedValue(mockEndpointResponse)
           });
           await expect(container.querySelector('.story-list').childElementCount).toBe(2)
-      
     })
+
+    it('logs an error to the console', async () => {
+        await act(async () => {
+          jest.spyOn(console, 'log')
+          render(<Home/>, container);
+          mockedAxios.get.mockRejectedValueOnce('server down!');
+        });
+        await expect(console.log).toHaveBeenCalled();
+      })
+    
 })
