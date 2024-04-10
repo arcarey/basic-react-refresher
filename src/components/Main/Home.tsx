@@ -49,10 +49,6 @@ export default function Home() {
         filterGenres(activeGenres)
     }, [ activeGenres ])
 
-    useEffect(() => {
-        console.log(filteredStoryList)
-    }, [ filteredStoryList ])
-
     return (
         <>
             <TitleCard />
