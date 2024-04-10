@@ -18,11 +18,11 @@ describe( Header , () => {
       container = null;
     })
   
-    it('renders the about page', () => {
+    it('renders the header page', () => {
         act(() => {
             render(<Header />, container);
         });
       expect(container.querySelector('h1').textContent).toBe('News of the Day');
-      
+
     })
 })

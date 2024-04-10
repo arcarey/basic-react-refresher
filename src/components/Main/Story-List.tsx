@@ -10,7 +10,7 @@ interface Props {
 export default function StoryList(props: Props) {
 
     return (
-        <>
+        <div>
             {props.filteredStoryList.length > 0 && props.storyList.length > 0 && props.storyList.map((story: Story, index: number ) => {
                 return (
                     <StoryCard
@@ -20,6 +20,6 @@ export default function StoryList(props: Props) {
                     visible={props.filteredStoryList.includes(story)}/>
                 )
             })}
-        </>
+        </div>
     )
 }

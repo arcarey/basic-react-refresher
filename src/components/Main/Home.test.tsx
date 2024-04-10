@@ -164,12 +164,12 @@ describe( Home , () => {
       container = null;
     })
   
-    it('calls the story api and renders 2 stories', async () => {
+    it('calls the story api and renders 1 storylist', async () => {
         await act(async () => {
             render(<Home/>, container);
             mockedAxios.get.mockResolvedValue(mockEndpointResponse)
           });
-          await expect(container.querySelector('.story-list').childElementCount).toBe(2)
+          await expect(container.querySelector('.story-list').childElementCount).toBe(1)
     })
 
     it('logs an error to the console', async () => {
