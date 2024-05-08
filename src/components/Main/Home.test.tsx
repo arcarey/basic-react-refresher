@@ -148,6 +148,7 @@ jest.mock('react-router-dom', () => ({
 }));
 jest.mock('axios');
 
+// eslint-disable-next-line
 let container: any = null;
 const mockedAxios = axios as jest.Mocked<typeof axios>
 

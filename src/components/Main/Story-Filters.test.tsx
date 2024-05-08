@@ -5,10 +5,11 @@ import { SetStateAction } from "react";
 import { userEvent } from '@testing-library/user-event'
 
 
-
+// eslint-disable-next-line
 let container: any = null;
-let mockActiveGenres = ['All']
-let mockGenres = ['us', 'health', 'business', 'nyregion', 'arts', 'opinion']
+const mockActiveGenres = ['All']
+const mockGenres = ['us', 'health', 'business', 'nyregion', 'arts', 'opinion']
+// eslint-disable-next-line
 function mockSetActiveGenre (value: SetStateAction<string[]>): any {
     return value
 }
@@ -36,6 +37,7 @@ describe( StoryFilters , () => {
     it('Sets active genre to All when clicked', async () => {
         const user = userEvent.setup()
         let testResult = ['']
+        // eslint-disable-next-line
         const testSetActiveGenre = (value: any) => testResult = value ;
         render(<StoryFilters genres={mockGenres} activeGenres={mockActiveGenres} setActiveGenres={testSetActiveGenre} />, container);
         await user.click(container.querySelectorAll('button')[0])
@@ -45,6 +47,7 @@ describe( StoryFilters , () => {
     it('Sets active genre to us when clicked', async () => {
         const user = userEvent.setup()
         let testResult = ['']
+        // eslint-disable-next-line
         const testSetActiveGenre = (value: any) => testResult = value ;
         render(<StoryFilters genres={mockGenres} activeGenres={['arts']} setActiveGenres={testSetActiveGenre} />, container);
         await user.click(container.querySelectorAll('button')[1])

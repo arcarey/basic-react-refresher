@@ -210,6 +210,7 @@ const mockFilteredStoryList: Array<Story> = [{
 
 ]
 
+// eslint-disable-next-line
 let container: any = null;
 
 describe( StoryList , () => {

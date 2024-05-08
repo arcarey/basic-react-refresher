@@ -4,7 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { loadEnv } from "vite";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => { 
+export default defineConfig(({ mode }) => { 
   const env = loadEnv(mode, process.cwd(), '');
   return {
     plugins:[react(),tsconfigPaths()],

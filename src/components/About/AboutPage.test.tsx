@@ -3,7 +3,7 @@ import { act } from "react-dom/test-utils";
 import AboutPage from "./AboutPage";
 
 
-
+// eslint-disable-next-line
 let container: any = null;
 
 describe( AboutPage , () => {

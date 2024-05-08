@@ -31,7 +31,7 @@ export default function Home() {
     }
 
     function mapGenres(stories: Array<Story>) {
-        let genreArr = [... new Set(stories.map((story: { section: any; }) => story.section))]
+        const genreArr = [... new Set(stories.map((story: { section: string }) => story.section))]
         setGenres(genreArr);
         setActiveGenres(['All']);
     }

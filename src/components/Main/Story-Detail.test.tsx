@@ -141,7 +141,7 @@ const mockEndpointResponse = { data: {results: [{
   "short_url": ""
   }]}}
 
-
+// eslint-disable-next-line
 let container: any = null;
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
