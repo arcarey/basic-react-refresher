@@ -172,7 +172,7 @@ describe( StoryDetail , () => {
       render(<StoryDetail/>, container);
       mockedAxios.get.mockResolvedValue(mockEndpointResponse)
     });
-    await expect(container.querySelector('.story-detail-title').textContent).toBe(mockEndpointResponse.data.results[1].title)
+    expect(container.querySelector('.story-detail-title').textContent).toBe(mockEndpointResponse.data.results[1].title)
   })
 
   it('logs an error to the console', async () => {
@@ -181,6 +181,6 @@ describe( StoryDetail , () => {
       render(<StoryDetail/>, container);
       mockedAxios.get.mockRejectedValueOnce('server down!');
     });
-    await expect(console.log).toHaveBeenCalled();
+    expect(console.log).toHaveBeenCalled();
   })
 })

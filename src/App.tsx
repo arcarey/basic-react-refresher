@@ -20,9 +20,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Navigate to='/home'></Navigate>} />
           <Route path='/home' element={<Home/>} />
-          <Route path='/story/:id' element={<StoryDetail/>} />        
+          <Route path='/story/:id' element={<StoryDetail/>} />    
           <Route path='/about' element={<AboutPage></AboutPage>} />
-          <Route path='*' element={<h2>404 Story not found!</h2>} />
+          <Route path='*' element={<h2>404 Page not found!</h2>} />
         </Routes>
       </Router>
     </>

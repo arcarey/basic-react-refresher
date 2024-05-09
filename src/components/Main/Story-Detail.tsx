@@ -9,13 +9,19 @@ export default function StoryDetail() {
     const storyId = useParams<{id: string}>().id;
     
     const [storyDetails, setStoryDetails] = useState<Story>()
+    const [errorState, setErrorState] = useState<boolean>(false)
 
     useEffect(() => {
         async function fetchStories() {
             try {
                 const stories = await axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key='+process.env.NYT_TOP_STORIES_KEY);
-                setStory(stories.data.results.find((story: Story) => story.uri.split('/')[story.uri.split('/').length -1] === storyId));
+                if (stories.data.results.find((story: Story) => story.uri.split('/')[story.uri.split('/').length -1] === storyId)) {
+                    setStory(stories.data.results.find((story: Story) => story.uri.split('/')[story.uri.split('/').length -1] === storyId));
+                } else {
+                    setErrorState(true)
+                }
             } catch (error) {
+                setErrorState(true);
                 console.log('Error Fetching stories', error);
             }
         }
@@ -31,6 +37,9 @@ export default function StoryDetail() {
 
     return (
        <article className='story-detail-container'>
+       {errorState && 
+       <h2>404 Story not found!</h2>
+       } 
        {storyDetails && 
         <div>
             <header>
