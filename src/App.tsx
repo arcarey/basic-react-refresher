@@ -22,7 +22,7 @@ function App() {
           <Route path='/home' element={<Home/>} />
           <Route path='/story/:id' element={<StoryDetail/>} />        
           <Route path='/about' element={<AboutPage></AboutPage>} />
-          <Route path='*' element={<h1>404 Story not found!</h1>} />
+          <Route path='*' element={<h2>404 Story not found!</h2>} />
         </Routes>
       </Router>
     </>

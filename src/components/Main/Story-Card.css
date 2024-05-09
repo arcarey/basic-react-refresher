@@ -23,6 +23,8 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+    line-height: 1.2;
+    font-size: 1.2em;
 }
 
 .story-card-byline {

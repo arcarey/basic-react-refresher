@@ -16,7 +16,7 @@ export default function StoryCard(props: Props) {
                 href={`../story/${props.story.uri.split('/')[props.story.uri.split('/').length -1]}`}>
                 <div className='story-card-content'>
                     <div className='story-card-text'>
-                        <h3 className='story-card-title'>{props.story.title}</h3>
+                        <h2 className='story-card-title'>{props.story.title}</h2>
                         <p className='story-card-byline'>{props.story.byline}</p>
                     </div>
                 {props.story.multimedia && 

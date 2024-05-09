@@ -11,10 +11,13 @@
     margin-top: .5em;
     margin-bottom: .5em;
     line-height: .95;
+    font-size: 2.8em;
 }
 
 .story-detail-abstract {
     color: var(--neutral-675);
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 .story-detail-divider {

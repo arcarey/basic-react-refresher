@@ -33,20 +33,23 @@ export default function StoryDetail() {
        <article className='story-detail-container'>
        {storyDetails && 
         <div>
-            <h2 className='story-detail-title'>{storyDetails.title}</h2>
-            <h3 className='story-detail-abstract'>{storyDetails.abstract}</h3>
-            <div className='divider story-detail-divider'></div>
-            <h4 className='story-detail-byline'>{storyDetails.byline}</h4>
-            <div className='divider story-detail-divider'></div>
-            {storyDetails.multimedia && 
-            <>
-                <img
-                className='story-detail-image'
-                src={storyDetails.multimedia[1].url}
-                alt={storyDetails.multimedia[0].caption}
-                ></img>
-            </>
-            }
+            <header>
+                <h2 className='story-detail-title'>{storyDetails.title}</h2>
+                <p className='story-detail-abstract'>{storyDetails.abstract}</p>
+                <div className='divider story-detail-divider'></div>
+                <div className='story-detail-byline'>{storyDetails.byline}</div>
+                <div className='divider story-detail-divider'></div>
+                {storyDetails.multimedia && 
+                <>
+                    <img
+                    className='story-detail-image'
+                    src={storyDetails.multimedia[1].url}
+                    alt={storyDetails.multimedia[0].caption}
+                    ></img>
+                </>
+                }
+
+            </header>
             <p>
                 Netus etiam varius faucibus cum feugiat accumsan. Congue id, mattis condimentum quisque ultricies. Magna sociosqu elementum justo tempor nunc lacinia ac justo placerat ridiculus gravida. Volutpat, scelerisque netus malesuada. Hac, purus class dis aliquam habitant aptent cursus integer. Sociis lorem nam ut aliquet porta praesent laoreet tortor fusce dolor? Tempor blandit, venenatis inceptos? Pharetra dolor enim consectetur; ullamcorper aenean. Risus viverra nam inceptos? Mi non commodo.
             </p>

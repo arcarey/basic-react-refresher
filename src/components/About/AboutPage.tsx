@@ -1,3 +1,4 @@
+import './AboutPage.css'
 
 export default function AboutPage() {
 
@@ -6,7 +7,7 @@ export default function AboutPage() {
 
     return (
         <article>
-            <h1>About the Developer</h1>
+            <h2 className="about-header">About the Developer</h2>
             <p>{aboutText}</p>
         </article>
     )

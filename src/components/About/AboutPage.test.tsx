@@ -22,6 +22,6 @@ describe( AboutPage , () => {
         act(() => {
             render(<AboutPage />, container);
         });
-      expect(container.querySelector('h1').textContent).toBe('About the Developer')
+      expect(container.querySelector('h2').textContent).toBe('About the Developer')
     })
 })
