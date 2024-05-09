@@ -18,7 +18,7 @@ Clone the repo
 
 Create a .env file in the root directory with the following 
 
-`NYT_TOP_STORIES_KEY='YOUR_KEY' (LiveFront, this key will be provided in my email with the link)
+NYT_TOP_STORIES_KEY="YOUR_KEY" (LiveFront, this key will be provided in my email with the link)
 
 
 To install the needed packages:
