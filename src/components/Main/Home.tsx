@@ -28,8 +28,9 @@ export default function Home() {
         async function fetchStories() {
             try {
                 const stories = await axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key='+process.env.NYT_TOP_STORIES_KEY);
-                await setStoryList(stories.data.results);
+                setStoryList(stories.data.results);
             } catch (error) {
+                alert('Error fetching stories, please try again later or contact support at abc123@hawtmail.gov')
                 console.log('Error Fetching stories', error);
             }
         }
